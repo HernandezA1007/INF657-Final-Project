@@ -22,7 +22,7 @@ const MovieListScreen = ({ navigation }) => {
     }, []);
 
     const loadMovies = async () => {
-        setTrending(await fetchCategoryMovies('trending/all/day'));
+        setTrending(await fetchCategoryMovies('trending/all/day')); //
         setPopular(await fetchCategoryMovies('popular'));
         setUpcoming(await fetchCategoryMovies('upcoming'));
         setTopRated(await fetchCategoryMovies('top_rated'));

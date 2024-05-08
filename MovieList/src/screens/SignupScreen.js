@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native'; // button
 import { auth } from '../config/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth'; //
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const SignupScreen = ({ navigation }) => {
     const [email, setEmail] = useState('');
@@ -18,6 +19,11 @@ const SignupScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            <View style={styles.headerContainer}>
+                <Text style={styles.logoPartOne}>A</Text>
+                <Text style={styles.logoPartTwo}>Movies</Text>
+                <Icon name="movie-roll" size={30} color="#007bff" style={styles.icon} />
+            </View>
             <TextInput
                 style={styles.input}
                 placeholder="Email"
@@ -61,7 +67,26 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 5,
         marginVertical: 10,
-    }
+    },
+    headerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 40,
+    },
+    logoPartOne: {
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: '#007bff'
+    },
+    logoPartTwo: {
+        fontSize: 24,
+        marginLeft: 5,
+        color: 'black'
+    },
+    icon: {
+        marginLeft: 10
+    },
 });
 
 export default SignupScreen;
