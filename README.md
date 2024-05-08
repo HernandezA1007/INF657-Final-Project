@@ -1,6 +1,8 @@
 # INF657-Final-Project - Movie List App: A Movies
 
-![MovieList](./img/MovieList.jfif)
+<p align="center">
+    <img src="./img/MovieList.jfif" alt="MovieList" height= 50% width=50%/>
+</p>
 
 The project "A Movies" is a React Native app where users can browse a list of movies, save their favorite movies to a favorites tab, and write reviews for the movies they watched. I used themoviesdb (TMDB) API to fetch real-tiem data about movies. Users can sign up and log in using their email and password thanks to Firebase authentication. I also used Firestore database to handle user data and reviews. Async Storage is also used for storing user favorited movies as a change. In addition, there is a search functionality. The app uses bottom tab and stack navigation to navigate between screens.
 
